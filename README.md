@@ -50,4 +50,10 @@ El script queda de la siguiente forma:
       }
     }
 
-```
+```  
+
+###### Ejemplo de uso de la cámara  
+En el siguiente gif se ve la funcionalidad implementada de la cámara.  
+Cuando se pulsa la tecla "v" sea activa la cámara. Y cuando se vuelve a pulsar se detiene la grabación y se restaura la textura inicial.  
+
+![alt_text](https://github.com/ULL-GII-InterfacesII/MicrofonoYCamara-Alu0101133201/blob/main/camara.gif)
