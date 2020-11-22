@@ -1,4 +1,4 @@
-# Microfono Y Camara
+# Micrófono Y Cámara
 ### Sergio Guerra Arencibia - ULL - Interfaces Inteligentes
 
 #### Micrófono  
