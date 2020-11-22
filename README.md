@@ -16,17 +16,16 @@ Este método recibe cuatro parámetros. El primero de ellos es el micrófono que
 
 El script queda de la siguiente forma:  
 ```c#
-  void Update()
-    {
-      if (Input.GetKeyDown("space")) {
-        if (!Microphone.IsRecording(""))
-          audioSource.clip = Microphone.Start("", false, 15, 48000);
-        else {
-          Microphone.End("");
-          audioSource.Play();
-        }
-      }
-    }
+ void Update() {
+   if (Input.GetKeyDown("space")) {
+     if (!Microphone.IsRecording(""))
+       audioSource.clip = Microphone.Start("", false, 15, 48000);
+     else {
+       Microphone.End("");
+       audioSource.Play();
+     }
+   }
+ }
 ```  
 
 
