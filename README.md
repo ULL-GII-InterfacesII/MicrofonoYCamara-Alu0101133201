@@ -33,8 +33,8 @@ El script queda de la siguiente forma:
 Para el uso de la cámara dentro de nuestro proyecto Unity todo lo que debemos hacer es modificar la textura de un GameObject y añadir una textura que mostrará lo que se capte por la cámara.  
 En este caso yo he optado por construir un GameObject plano, similar a una pantalla, y proyectar en él lo que se capture por la cámara. Así que lo primero es añadir a este elemento un script que realizará esta tarea.  
 
-Similar a lo que se hizo con el micrófono, estaremos comprobando en el método update si una tecla es pulsada (en este caso la tecla "v"). Si es pulsada, comprobamos si ya se está grabando con la cámara. En caso negativo, colocamos la textura al componente Renderer del objeto y comenzamos a grabar.
-En caso de que ya estemos grabando, restauramos la textura del objeto a la que tenía inicialmente (si no la restauráramos, se quedaría la última imagen congelada).  
+Similar a lo que se hizo con el micrófono, estaremos comprobando en el método update si una tecla es pulsada (en este caso la tecla "v"). Si es pulsada, comprobamos si ya se está grabando con la cámara. En caso negativo, colocamos la textura de la cámara al componente Renderer del objeto y comenzamos a grabar.
+En caso de que ya estemos grabando, restauramos la textura del objeto a la que tenía inicialmente (si no la restauráramos, se quedaría la última imagen congelada) y paramos de grabar.  
   
 El script queda de la siguiente forma:   
 
