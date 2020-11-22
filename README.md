@@ -3,8 +3,10 @@
 
 #### Micrófono  
 Para el uso del micrófono dentro de nuestro proyecto Unity, lo primero que debemos de hacer es asginarle un componente "Audio Source" a un objeto vacío o a la cámara principal (dado que no tenemos ningún gameObject de micrófono). Yo he optado por esta segunda opción.  
+
 Posteriormente creamos sobre este objeto un script desde el cual manipularemos el componente recién mencionado. 
-En este script vamos comprobar gracias al método update si una tecla (en mi caso en espacio) ha sido pulsada. Si es así, comprobamos si estamos en un estado de grabación o no. En el caso de que no estemos grabando, comenzamos a grabar con el micrófono. En cambio, si estábamos grabando terminamos la grabación y la reproducimos.  
+En este script vamos comprobar gracias al método update si una tecla (en mi caso en espacio) ha sido pulsada. Si es así, comprobamos si estamos en un estado de grabación o no. En el caso de que no estemos grabando, comenzamos a grabar con el micrófono. En cambio, si estábamos grabando terminamos la grabación y la reproducimos.   
+
 La instrucción principal y la que más explicación necesita es la de inicio de grabación, que es la siguiente:  
 
 ```c#
