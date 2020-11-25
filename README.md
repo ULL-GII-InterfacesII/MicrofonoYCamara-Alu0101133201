@@ -15,17 +15,23 @@ La instrucción principal y la que más explicación necesita es la de inicio de
 Este método recibe cuatro parámetros. El primero de ellos es el micrófono que se usará en la grabación, al poner la cadena vacía escoge el micrófono asignado por defecto. El segundo es si la grabación se hará ciclica, opción que hemos desactivado. El tercero es la duración de la grabación y el último es la frecuencia con la que se trabajará que en mi caso concreto es 48000.  
 
 El script queda de la siguiente forma:  
-```c#
- void Update() {
-   if (Input.GetKeyDown("space")) {
-     if (!Microphone.IsRecording(""))
-       audioSource.clip = Microphone.Start("", false, 15, 48000);
-     else {
-       Microphone.End("");
-       audioSource.Play();
-     }
+```c# 
+   void Start() {
+      renderer = GetComponent<Renderer>();
+      defaultTexture = renderer.material.mainTexture;
+      webcamTexture = new WebCamTexture("HD WebCam");
    }
- }
+   
+   void Update() {
+      if (Input.GetKeyDown("space")) {
+        if (!Microphone.IsRecording(""))
+          audioSource.clip = Microphone.Start("", false, 15, 48000);
+        else {
+          Microphone.End("");
+          audioSource.Play();
+        }
+      }
+    }
 ```  
 
 
