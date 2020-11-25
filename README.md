@@ -17,11 +17,9 @@ Este método recibe cuatro parámetros. El primero de ellos es el micrófono que
 El script queda de la siguiente forma:  
 ```c# 
    void Start() {
-      renderer = GetComponent<Renderer>();
-      defaultTexture = renderer.material.mainTexture;
-      webcamTexture = new WebCamTexture("HD WebCam");
+      audioSource = GetComponent<AudioSource>();
    }
-   
+    
    void Update() {
       if (Input.GetKeyDown("space")) {
         if (!Microphone.IsRecording(""))
@@ -45,6 +43,12 @@ En caso de que ya estemos grabando, restauramos la textura del objeto a la que t
 El script queda de la siguiente forma:   
 
 ```c#
+   void Start() {
+      renderer = GetComponent<Renderer>();
+      defaultTexture = renderer.material.mainTexture;
+      webcamTexture = new WebCamTexture("HD WebCam");
+   }
+   
    void Update() {
       if (Input.GetKey("v")) {
         if (!webcamTexture.isPlaying) {
